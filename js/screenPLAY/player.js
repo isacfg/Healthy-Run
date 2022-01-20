@@ -52,10 +52,4 @@ class Player {
     debug() {
         console.log(this.x, this.y, this.velocity);
     }
-
-    reset() {
-        if (tela === 0) {
-
-        }
-    }
 }
