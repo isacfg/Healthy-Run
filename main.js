@@ -10,7 +10,7 @@ function preload() {
   arrowimg = loadImage('assets/arrow.png');
   retroFont = loadFont('assets/fonts/PressStart2P-Regular.ttf');
   retroFont2 = loadFont('assets/fonts/Arcade2020.ttf');
-  // retroFont = loadFont('assets/Sabo-Filled.otf');
+  // retroFont3 = loadFont('assets/Sabo-Filled.otf');
 
 
 }
