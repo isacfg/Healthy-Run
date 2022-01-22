@@ -17,7 +17,6 @@ class Obstacles {
         this.y = 400;
         this.speed = random(6, 8);
         this.collision = false;
-       
     }
 
     show() {

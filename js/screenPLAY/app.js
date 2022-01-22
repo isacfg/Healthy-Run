@@ -33,12 +33,8 @@ function screenPLAY() {
         }
 
         //score detector
-        // fix bug infinite score
-        if (obstacles[i].x < 180 && obstacles[i].x > 170) {
+        if (obstacles[i].x < 180 && obstacles[i].x > 170 && player.freezes == false) {
             score++;
-
-            // console.log(obstacles[i].x, player.x)
-            // console.log('point')
         }
     }
 
