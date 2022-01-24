@@ -28,7 +28,7 @@ function setup() {
   frameRate(60);
 
   // playTrack1();
-  playOnSetup();
+  // playOnSetup();
 }
 
 function draw() {
