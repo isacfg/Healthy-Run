@@ -16,6 +16,7 @@ function arrow() {
 
 // moving arrow
 function keyPressed() {
+    playTrack1();
 
     if (keyCode === DOWN_ARROW && tela === 0 && arrowX == 590 && arrowY === 162) {
         arrowY = 234; // x and y position INSTRUÇÕES
