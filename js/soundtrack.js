@@ -1,5 +1,5 @@
 
-function playTrack1() {
+function playOnKeys() {
     // play main track
     if (!track1.isPlaying()) {
         track1.play();

@@ -38,6 +38,10 @@ function screenPLAY() {
         }
     }
 
+    //diseases 
+    aleatoriedade();
+    sickeness();
+
     // score text
     scoreText();
     scoreNumber();
