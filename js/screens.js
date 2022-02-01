@@ -7,6 +7,7 @@ function screens() {
 
         //arrow selection
         arrow();
+
     }
 
     else if (tela === 1) { // jogo
@@ -21,6 +22,9 @@ function screens() {
     }
     else if (tela === 3) { // créditos
         screenCREDITS();
+    }
+    else if (tela == 9) {
+        screenPlayground();  
     }
 }
 

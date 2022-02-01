@@ -23,4 +23,5 @@ function menu() {
 function alltexts() {
     gameName();
     menu();
+    version();
 }

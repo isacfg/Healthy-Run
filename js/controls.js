@@ -17,6 +17,11 @@ function arrow() {
 // moving arrow
 function keyPressed() {
 
+    if (keyCode === 80) { // p
+        stopMusic();
+        tela = 9; // playground
+    }
+
     if (keyCode === DOWN_ARROW && tela === 0 && arrowX == 590 && arrowY === 162) {
         arrowY = 234; // x and y position INSTRUÇÕES
         arrowX = 540; // x and y position INSTRUÇÕES
@@ -130,7 +135,5 @@ function keyPressed() {
             arrowOverY = 178; // Y JOGAR NOVAMENTE
         }
     }
-    // play track 1
-    playOnKeys();
 
 }

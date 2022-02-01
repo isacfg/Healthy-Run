@@ -20,15 +20,15 @@ class Player {
         this.lift = -18;
         this.velocity = 0;
         this.downForce = 30;
-        this.freezes = false
+        this.freezes = false;
     }
 
     update() {
         this.velocity = this.velocity + this.gravity;
         this.y = this.y + this.velocity;
 
-        if (this.y > 375) {
-            this.y = 375;
+        if (this.y > 340) {
+            this.y = 350;
             this.velocity = 0;
         }
 

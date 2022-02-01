@@ -46,20 +46,13 @@ class Obstacles {
     }
 
     hits(player) {
-        if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
-            this.collision = true;
-            return true;
-        }
-        this.collision = false;
-        return false;
 
-        // OLD COLISION SYSTEM
-        // if (this.x + 50 > player.x && this.x < player.x && this.y + 50 > player.y && this.y < player.y + 50) {
+        // if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
         //     this.collision = true;
         //     return true;
         // }
-        // this.collision = false;
-        // return false;
+        this.collision = false;
+        return false;
     }
 
     freezes() {
