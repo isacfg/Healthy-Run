@@ -47,10 +47,10 @@ class Obstacles {
 
     hits(player) {
 
-        // if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
-        //     this.collision = true;
-        //     return true;
-        // }
+        if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
+            this.collision = true;
+            return true;
+        }
         this.collision = false;
         return false;
     }
