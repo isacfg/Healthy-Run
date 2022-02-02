@@ -2,7 +2,7 @@
 function backgroundMusic() {
  
     if (!track1.isPlaying()) { // if the track is not playing
-        // track1.play();
+        track1.play();
         track1.setVolume(0.4);
         userStartAudio(); // start the track
         // console.log('playing');

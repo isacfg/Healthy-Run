@@ -14,6 +14,11 @@ function screenPLAY() {
     // player.debug();
     afterDeath();
 
+    // animations
+    dinoGreenSprites.position.x = player.x;
+    dinoGreenSprites.position.y = player.y;
+    drawSprites();
+
     // obstacles loop and functions
     for (var i = obstacles.length - 1; i >= 0; i--) {
         obstacles[i].show();

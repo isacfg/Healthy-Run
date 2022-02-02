@@ -4,7 +4,7 @@ let retroFont;
 let retroFont2;
 let instScreen;
 let credScreen;
-let dinos;
+let dinoGRun, dinoGJump, dinoGIdle, dinoGDown, dinoGHit;
 
 
 function preload() {
@@ -25,7 +25,7 @@ function preload() {
   track1 = loadSound('assets/soundtrack/6 A.M. Riverside Town (Copyright Free).mp3');
 
   // load sprites using p5.play library
-  dinos = loadAnimation(
+  dinoGRun = loadAnimation(
     'assets/sprites/green/green_running01.png',
     'assets/sprites/green/green_running02.png',
     'assets/sprites/green/green_running03.png',
@@ -34,6 +34,29 @@ function preload() {
     'assets/sprites/green/green_running06.png',
     'assets/sprites/green/green_running07.png',
     'assets/sprites/green/green_running08.png',
+  )
+  dinoGJump = loadAnimation(
+    'assets/sprites/green/green_jump01.png',
+    'assets/sprites/green/green_jump02.png',
+  )
+  dinoGIdle = loadAnimation(
+    'assets/sprites/green/green_standing01.png',
+    'assets/sprites/green/green_standing02.png',
+    'assets/sprites/green/green_standing03.png',
+  )
+  dinoGDown = loadAnimation(
+    'assets/sprites/green/green_down01.png',
+    'assets/sprites/green/green_down02.png',
+    'assets/sprites/green/green_down03.png',
+    'assets/sprites/green/green_down04.png',
+    'assets/sprites/green/green_down05.png',
+    'assets/sprites/green/green_down06.png',
+    'assets/sprites/green/green_down07.png',
+  )
+  dinoGHit = loadAnimation(
+    'assets/sprites/green/green_hit01.png',
+    'assets/sprites/green/green_hit02.png',
+    'assets/sprites/green/green_hit03.png',
   )
 }
 
@@ -44,7 +67,9 @@ function setup() {
   // set up soundtrack
   backgroundMusic();
 
-  dinoSetup();
+  // set up sprites
+  player = new Player();
+  dinoGSetup();
 }
 
 function draw() {

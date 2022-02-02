@@ -17,6 +17,8 @@ function arrow() {
 // moving arrow
 function keyPressed() {
 
+
+    // playground stuff
     if (keyCode === 80) { // p
         stopMusic();
         tela = 9; // playground
@@ -47,7 +49,6 @@ function keyPressed() {
     // screen selection
     if (keyCode === ENTER && option == 1 && tela === 0) {
         tela = 1;
-        player = new Player();
         mBackground = new BackgroundM();
 
         if (frameCount % 80 != 0) {
