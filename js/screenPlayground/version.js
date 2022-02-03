@@ -1,5 +1,7 @@
-// v1.6
-// Added Dino's animations
+// v1.7
+// Added random soundtraks
+// Jump, Coin, Hit Sfx added
+// Added credits.txt
 
 
 function version() {
@@ -8,5 +10,5 @@ function version() {
     textSize(12);
     textAlign(CENTER);
 
-    text('v1.6', 30, height - 5);
+    text('v1.7', 30, height - 5);
 }

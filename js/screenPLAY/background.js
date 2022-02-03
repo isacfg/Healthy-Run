@@ -11,7 +11,7 @@ class BackgroundM {
     }
 
     update() {
-        // Draw the background, e move conforme a velocidade
+        // Draw the background, e move acording to speed
         this.x -= this.speed;
 
         // Dectecta se o background saiu da tela e reinicia

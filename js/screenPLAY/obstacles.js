@@ -50,6 +50,7 @@ class Obstacles {
         if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
             this.collision = true;
             return true;
+
         }
         this.collision = false;
         return false;
@@ -69,6 +70,12 @@ class Obstacles {
             // obstacles stop
             for (var i = obstacles.length - 1; i >= 0; i--) {
                 obstacles[i].speed = 0;
+            }
+
+            if (!hitSFX.isPlaying() && player.hitStop == false) {
+                hitSFX.setVolume(0.2);
+                hitSFX.play();
+                player.hitStop = true;
             }
         }
     }

@@ -9,6 +9,8 @@ function resetPlayer() {
     player.collision = false;
     player.freezes = false;
     player.goingDown = false;
+    player.hitStop = false;
+
 }
 
 class Player {
@@ -23,6 +25,7 @@ class Player {
         this.downForce = 30;
         this.freezes = false;
         this.goingDown = false;
+        this.hitStop = false;
     }
 
     update() {
@@ -42,20 +45,20 @@ class Player {
         // rect(this.x, this.y, this.width, this.height);
 
         // animations
-        if (this.y == 370 && this.goingDown == false && this.freezes == false) {
+        if (this.y == 370 && this.goingDown == false && this.freezes == false) { // running
             dinoGreenSprites.changeAnimation('run');
             dinoGreenSprites.animation.play();
         }
-        else if (this.y < 370 && this.goingDown == false && this.freezes == false) {
+        else if (this.y < 370 && this.goingDown == false && this.freezes == false) { // jumping
             dinoGreenSprites.changeAnimation('jump');
             dinoGreenSprites.animation.play();
         }
-        else if (this.goingDown == true && this.freezes == false) {
+        else if (this.goingDown == true && this.freezes == false) { // falling or down
             dinoGreenSprites.changeAnimation('down');
             dinoGreenSprites.animation.play();
         }
         else if (this.freezes == true) {
-            dinoGreenSprites.changeAnimation('hit');
+            dinoGreenSprites.changeAnimation('hit'); // hit
             dinoGreenSprites.animation.play();
         }
     }
@@ -64,6 +67,10 @@ class Player {
         if (this.y > 340) {
             this.velocity = this.velocity + this.lift;
             this.goingDown = false;
+
+            // jump sound
+            jumpSFX.setVolume(0.2); 
+            jumpSFX.play();
         }
     }
 

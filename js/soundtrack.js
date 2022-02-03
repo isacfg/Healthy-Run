@@ -1,9 +1,16 @@
 
 function backgroundMusic() {
- 
-    if (!track1.isPlaying()) { // if the track is not playing
-        track1.play();
-        track1.setVolume(0.4);
+    index = int(random(0, tracks.length));
+
+    if (!tracks[index].isPlaying()) { // if the track is not playing
+        tracks[index].play();
+        console.log(index)
+        if (index == 2 || index == 1) {
+            tracks[index].setVolume(0.2);
+        }
+        else {
+            tracks[index].setVolume(0.3);
+        }
         userStartAudio(); // start the track
         // console.log('playing');
     }
@@ -11,16 +18,16 @@ function backgroundMusic() {
 
 function stopMusic() {
 
-    if (track1.isPlaying()) {
-        track1.stop();
+    if (tracks[index].isPlaying()) {
+        tracks[index].stop();
         // console.log('stopped');
     }
 }
 
 // function playOnSetup() {
-//     if (!track1.isPlaying()) {
-//         track1.play();
-//         track1.setVolume(0.5);
+//     if (!tracks[index].isPlaying()) {
+//         tracks[index].play();
+//         tracks[index].setVolume(0.5);
 //         console.log('playing from setup');
 //     }
 // }

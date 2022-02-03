@@ -1,10 +1,10 @@
 let land;
-let city;
-let retroFont;
-let retroFont2;
-let instScreen;
-let credScreen;
+let retroFont, retroFont2;
+let instScreen, credScreen;
 let dinoGRun, dinoGJump, dinoGIdle, dinoGDown, dinoGHit;
+let tracks = [];
+let jumpSFX, hitSFX, coinSFX;
+
 
 
 function preload() {
@@ -21,19 +21,25 @@ function preload() {
   retroFont = loadFont('assets/fonts/PressStart2P-Regular.ttf');
   retroFont2 = loadFont('assets/fonts/Arcade2020.ttf');
 
-  // load sounds
-  track1 = loadSound('assets/soundtrack/6 A.M. Riverside Town (Copyright Free).mp3');
+  // load background music
+  tracks[0] = loadSound('assets/soundtrack/6 A.M. Riverside Town (Copyright Free).mp3');
+  tracks[1] = loadSound('assets/soundtrack/Since 2 A.M. (Copyright Free).mp3');
+  tracks[2] = loadSound('assets/soundtrack/The Past (Copyright Free).mp3');
+  tracks[3] = loadSound('assets/soundtrack/Unwavering Emotion.mp3');
+
+  // load sfx
+  jumpSFX = loadSound('assets/sfx/jump.mp3');
+  hitSFX = loadSound('assets/sfx/hit.mp3');
+  coinSFX = loadSound('assets/sfx/coins.mp3');
 
   // load sprites using p5.play library
   dinoGRun = loadAnimation(
-    'assets/sprites/green/green_running01.png',
     'assets/sprites/green/green_running02.png',
     'assets/sprites/green/green_running03.png',
     'assets/sprites/green/green_running04.png',
     'assets/sprites/green/green_running05.png',
     'assets/sprites/green/green_running06.png',
     'assets/sprites/green/green_running07.png',
-    'assets/sprites/green/green_running08.png',
   )
   dinoGJump = loadAnimation(
     'assets/sprites/green/green_jump01.png',

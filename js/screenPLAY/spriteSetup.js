@@ -2,7 +2,7 @@
 function dinoGSetup() {
     // set up sprites
     dinoGreenSprites = createSprite(player.x, player.y, player.width, player.height);
-    dinoGRun.frameDelay = 3;
+    dinoGRun.frameDelay = 4;
 
     dinoGreenSprites.addAnimation('run', dinoGRun);
     dinoGreenSprites.addAnimation('jump', dinoGJump);
