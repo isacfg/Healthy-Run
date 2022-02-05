@@ -1,11 +1,11 @@
-var scoreX = 60;
-var scoreY = 70;
-var scoreNumberX = scoreX + 50;
-var scoreNumberY = scoreY - 20;
-var finalScore;
-var maxScore = 0;
-var maxScoreX = scoreX + 33;
-var maxScoreY = scoreY + 40;
+let scoreX = 60;
+let scoreY = 70;
+let scoreNumberX = scoreX + 50;
+let scoreNumberY = scoreY - 20;
+let finalScore;
+let maxScore = 0;
+let maxScoreX = scoreX + 33;
+let maxScoreY = scoreY + 40;
 
 function scoreText() {
     textFont(retroFont);
@@ -24,7 +24,7 @@ function scoreText() {
 }
 
 function scoreNumber() {
-    var multiplierScore = 115;
+    let multiplierScore = 115;
     finalScore = score * multiplierScore;
 
     textFont(retroFont);
@@ -70,10 +70,10 @@ function scoreNumber() {
 //     textSize(16);
 //     textAlign(LEFT);
 //     if (clockValue != 0) {
-//         var normalized = clockValue.toFixed(2);
+//         let normalized = clockValue.toFixed(2);
 //     }
 //     else {
-//         var normalized = clockValue
+//         let normalized = clockValue
 //     }
 //     text(normalized, width - 80, scoreY + 20)
 // }

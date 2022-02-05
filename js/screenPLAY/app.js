@@ -1,7 +1,8 @@
-var player;
-var obstacles = [];
-var score = 0;
-var mBackground = [];
+let player;
+let obstacles = [];
+let score = 0;
+let mBackground = [];
+let obstIndex;
 
 function screenPLAY() {
     // background
@@ -20,19 +21,21 @@ function screenPLAY() {
     drawSprites();
 
     // obstacles loop and functions
-    for (var i = obstacles.length - 1; i >= 0; i--) {
+    for (let i = obstacles.length - 1; i >= 0; i--) {
+
         obstacles[i].show();
         obstacles[i].update();
         // obstacles[i].debug();
         obstacles[i].hits(player);
         obstacles[i].freezes();
+        // console.log('obstaculo ' + i + ' ' +  obstacles[i].speed);
 
         if (obstacles[i].offscreen()) {
             obstacles.splice(i, 1);
         }
 
         // enemies spawn
-        if (frameCount % 80 == 0 && obstacles.length < 3) {
+        if (frameCount % 80 == 0 && obstacles.length < 4) {
             obstacles.push(new Obstacles());
             // console.log('new obstacle');
         }

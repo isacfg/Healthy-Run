@@ -17,8 +17,8 @@ class Player {
     constructor() {
         this.x = 200;
         this.y = 375;
-        this.height = 50;
-        this.width = 50;
+        this.height = 50; // precisa ser alterado pra o valor do sprite
+        this.width = 50; // precisa ser alterado pra o valor do sprite
         this.gravity = 0.8;
         this.lift = -18;
         this.velocity = 0;

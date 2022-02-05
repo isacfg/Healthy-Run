@@ -1,13 +1,13 @@
-var arrowimg;
+let arrowimg;
 
 // arrow default position
-var arrowX = 590;
-var arrowY = 162;
+let arrowX = 590;
+let arrowY = 162;
 
 let option = 1;
 let tela = 0;
 
-var optionOver = 1;
+let optionOver = 1;
 
 
 function arrow() {

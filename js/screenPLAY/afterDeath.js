@@ -1,12 +1,12 @@
-var arrowOverX = 523;
-var arrowOverY = 178;
+let arrowOverX = 523;
+let arrowOverY = 178;
 
 
 function afterDeath() {
-    var playAgainX = width / 2;
-    var playAgainy = 200;
-    var menuX = width / 2;
-    var menuY = 260;
+    let playAgainX = width / 2;
+    let playAgainy = 200;
+    let menuX = width / 2;
+    let menuY = 260;
 
 
     if (player.freezes === true) {

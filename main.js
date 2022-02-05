@@ -4,12 +4,13 @@ let instScreen, credScreen;
 let dinoGRun, dinoGJump, dinoGIdle, dinoGDown, dinoGHit;
 let tracks = [];
 let jumpSFX, hitSFX, coinSFX;
-
+let obstacleTypes = [];
 
 
 function preload() {
   // load images
-  land = loadImage('assets/sunsetDarker.png');
+  // land = loadImage('assets/sunsetDarker.png');
+  land = loadImage('assets/sunsetCity.png');
   instScreen = loadImage('assets/screens/instructions.png');
   credScreen = loadImage('assets/screens/credits.png');
   playgroundImg = loadImage('assets/screens/playground.png');
@@ -31,6 +32,15 @@ function preload() {
   jumpSFX = loadSound('assets/sfx/jump.mp3');
   hitSFX = loadSound('assets/sfx/hit.mp3');
   coinSFX = loadSound('assets/sfx/coins.mp3');
+
+  // load obstacles
+  obstacleTypes[0] = loadImage('assets/obstacles/DoubleOneDarkDoubleOneBox.png');
+  obstacleTypes[1] = loadImage('assets/obstacles/DoubleOneRedDoubleOneBox.png');
+  obstacleTypes[2] = loadImage('assets/obstacles/OneBox.png');
+  obstacleTypes[3] = loadImage('assets/obstacles/OneDarkOneBox.png');
+  obstacleTypes[4] = loadImage('assets/obstacles/OneRedOneBox.png');
+  obstacleTypes[5] = loadImage('assets/obstacles/TwoDarkOneBox.png');
+  obstacleTypes[6] = loadImage('assets/obstacles/TwoRedOneBox.png');
 
   // load sprites using p5.play library
   dinoGRun = loadAnimation(
@@ -73,9 +83,11 @@ function setup() {
   // set up soundtrack
   backgroundMusic();
 
-  // set up sprites
   player = new Player();
+
+  // set up sprites
   dinoGSetup();
+
 }
 
 function draw() {

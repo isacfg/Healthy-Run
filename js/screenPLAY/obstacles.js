@@ -1,8 +1,6 @@
 
 function resetObstacles() {
-    obstacles.height = random(100, 180);
-    obstacles.width = random(25, 75);
-    obstacles.x = 1366;
+    obstacles.x = 1400;
     obstacles.y = 400;
     obstacles.speed = random(6, 8);
     obstacles.length = 0;
@@ -11,19 +9,48 @@ function resetObstacles() {
 
 class Obstacles {
     constructor() {
-        this.height = random(100, 180);
-        this.width = random(25, 75);
-        this.x = 1366;
+        this.x = 1400;
         this.y = 400;
-        this.speed = random(6, 8);
+        this.speedBase = random(6, 8);
         this.collision = false;
+        this.obstcTypeIndex = int(random(0, obstacleTypes.length));
+
+        if (score == 0) {
+            this.speed = this.speedBase;
+        }
+        else if (score != 0) {
+            this.speed = this.speedBase + score / 10;
+        }
+
+        if (this.obstcTypeIndex == 0 || this.obstcTypeIndex == 1) {
+            this.width = 80;
+            this.height = 160;
+        }
+        else if (this.obstcTypeIndex == 2) {
+            this.width = 40;
+            this.height = 80;
+        }
+        else if (this.obstcTypeIndex == 3 || this.obstcTypeIndex == 4) {
+            this.width = 40;
+            this.height = 160;
+        }
+        else if (this.obstcTypeIndex == 5 || this.obstcTypeIndex == 6) {
+            this.width = 40;
+            this.height = 240;
+        }
     }
 
-    show() {
-        fill(255);
-        rectMode(CENTER);
-        rect(this.x, this.y, this.width, this.height);
 
+    show() {
+
+        // rectangular obstacles
+        // noFill();
+        // rectMode(CENTER);
+        // rect(this.x, this.y, this.width, this.height);
+
+        // obstacles sprites
+        imageMode(CENTER);
+        image(obstacleTypes[this.obstcTypeIndex], this.x, this.y);
     }
 
     update() {
@@ -39,10 +66,11 @@ class Obstacles {
     }
 
     debug() {
-        console.log(this.y, player.y);
-        if (this.collision == true) {
-            console.log('HIT');
-        }
+        // console.log(this.y, player.y);
+        // if (this.collision == true) {
+        //     console.log('HIT');
+        // }
+        // console.log(this.speed);
     }
 
     hits(player) {
@@ -50,10 +78,9 @@ class Obstacles {
         if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
             this.collision = true;
             return true;
-
         }
-        this.collision = false;
-        return false;
+        // this.collision = false;
+        // return false;
     }
 
     freezes() {

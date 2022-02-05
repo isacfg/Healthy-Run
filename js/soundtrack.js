@@ -4,7 +4,7 @@ function backgroundMusic() {
 
     if (!tracks[index].isPlaying()) { // if the track is not playing
         tracks[index].play();
-        console.log(index)
+        // console.log(index)
         if (index == 2 || index == 1) {
             tracks[index].setVolume(0.2);
         }
