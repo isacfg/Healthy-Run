@@ -82,91 +82,96 @@ function aleatoriedade() {
 
 function sickeness() {
 
-    if (finalScore > interval * 1 && finalScore < interval * 2) {
+    if (player.freezes == false) {
+        if (finalScore > interval * 1 && finalScore < interval * 2) {
 
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
 
+        }
+
+        else if (finalScore > interval * 3 && finalScore < interval * 4) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+        else if (finalScore > interval * 5 && finalScore < interval * 6) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+
+        else if (finalScore > interval * 7 && finalScore < interval * 8) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+        else if (finalScore > interval * 9 && finalScore < interval * 10) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+
+        else if (finalScore > interval * 11 && finalScore < interval * 12) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+
+        else if (finalScore > interval * 13 && finalScore < interval * 14) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+
+        else if (finalScore > interval * 15 && finalScore < interval * 16) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
+        else if (finalScore > interval * 17 && finalScore < interval * 18) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(16);
+            textAlign(CENTER);
+            text(diseases[pickDisease], width / 2, height / 2);
+
+        }
     }
-
-    if (finalScore > interval * 3 && finalScore < interval * 4) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-    if (finalScore > interval * 5 && finalScore < interval * 6) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-
-    if (finalScore > interval * 7 && finalScore < interval * 8) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-    if (finalScore > interval * 9 && finalScore < interval * 10) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-
-    if (finalScore > interval * 11 && finalScore < interval * 12) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-
-    if (finalScore > interval * 13 && finalScore < interval * 14) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-
-    if (finalScore > interval * 15 && finalScore < interval * 16) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
-    if (finalScore > interval * 17 && finalScore < interval * 18) {
-
-        textFont(retroFont);
-        fill('#F1FAEE');
-        textSize(16);
-        textAlign(CENTER);
-        text(diseases[pickDisease], width / 2, height / 2);
-
-    }
+    // else {
+    //     console.log('show menu');
+    // }
 
 }

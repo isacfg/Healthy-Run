@@ -15,13 +15,15 @@ class Obstacles {
         this.collision = false;
         this.obstcTypeIndex = int(random(0, obstacleTypes.length));
 
+        // speed multiplier for each obstacle based on player's score
         if (score == 0) {
             this.speed = this.speedBase;
         }
         else if (score != 0) {
-            this.speed = this.speedBase + score / 10;
+            this.speed = this.speedBase + score / 20;
         }
 
+        // width and height of obstacles
         if (this.obstcTypeIndex == 0 || this.obstcTypeIndex == 1) {
             this.width = 80;
             this.height = 160;
@@ -44,7 +46,7 @@ class Obstacles {
     show() {
 
         // rectangular obstacles
-        // noFill();
+        // fill(255);
         // rectMode(CENTER);
         // rect(this.x, this.y, this.width, this.height);
 
@@ -99,6 +101,7 @@ class Obstacles {
                 obstacles[i].speed = 0;
             }
 
+            // hit sound effect
             if (!hitSFX.isPlaying() && player.hitStop == false) {
                 hitSFX.setVolume(0.2);
                 hitSFX.play();

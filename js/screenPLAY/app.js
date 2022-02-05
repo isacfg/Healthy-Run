@@ -35,7 +35,7 @@ function screenPLAY() {
         }
 
         // enemies spawn
-        if (frameCount % 80 == 0 && obstacles.length < 4) {
+        if (frameCount % 80 == 0 && obstacles.length < 3) {
             obstacles.push(new Obstacles());
             // console.log('new obstacle');
         }
