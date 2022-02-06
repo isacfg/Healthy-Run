@@ -1,13 +1,10 @@
-// v1.9
-// improved colors
-    // obstacles
-    // dinos
-// fixed collision detection
-// fix player.height and player.width
-// fix sprite size
-// better obstacles sprite
-// fix gameover menu and diseases overlaping
-// faster loading screen
+// v1.9.1
+// improved credits screen
+// start to add skin selection screen and sprites
+// blue added
+// playground screen new background
+// fixed sprites locations
+
 
 
 
@@ -17,5 +14,5 @@ function version() {
     textSize(12);
     textAlign(CENTER);
 
-    text('v1.9', 30, height - 5);
+    text('v1.9.1', 30, height - 5);
 }
