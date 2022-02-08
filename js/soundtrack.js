@@ -1,6 +1,5 @@
 
 function backgroundMusic() {
-    musicIndex = int(random(0, tracks.length));
 
     if (isMusicPlaying == false) { // if the track is not playing
         tracks[musicIndex].play();
@@ -21,10 +20,10 @@ function backgroundMusic() {
 
 function stopMusic() {
 
-    if (isMusicPlaying == false) {
-        tracks[musicIndex].stop();
-        // console.log('stopped');
-    }
+    // if (isMusicPlaying == false) {
+    //     tracks[musicIndex].stop();
+    //     // console.log('stopped');
+    // }
 }
 
 // function playOnSetup() {

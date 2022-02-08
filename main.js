@@ -6,6 +6,8 @@ let tracks = [];
 let jumpSFX, hitSFX, coinSFX;
 let obstacleTypes = [];
 let isMusicPlaying = false;
+let dinoSelector = 1;
+let greenSelect, blueSelect, redSelect, yellowSelect;
 
 
 function preload() {
@@ -32,13 +34,12 @@ function setup() {
   player = new Player();
 
   // set up sprites
-  dinoGSetup();
+  dinosSetup();
 
 }
 
 function draw() {
   // screen manager
   screens();
-
 }
 

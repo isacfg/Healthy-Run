@@ -1,8 +1,9 @@
 let arrowOverX = 523;
 let arrowOverY = 178;
+let gameOverMenu = false;
 
 
-function afterDeath() {
+function gameOver() {
     let playAgainX = width / 2;
     let playAgainy = 200;
     let menuX = width / 2;
@@ -29,6 +30,7 @@ function afterDeath() {
         text('IR PARA MENU', menuX, menuY);
 
         // console.log('game freezes');
+        gameOverMenu = true;
     }
 }
 

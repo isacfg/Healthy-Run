@@ -20,7 +20,7 @@ class Obstacles {
             this.speed = this.speedBase;
         }
         else if (score != 0) {
-            this.speed = this.speedBase + score / 20;
+            this.speed = this.speedBase + score / 15;
         }
 
         // width and height of obstacles
@@ -67,22 +67,14 @@ class Obstacles {
         }
     }
 
-    debug() {
-        // console.log(this.y, player.y);
-        // if (this.collision == true) {
-        //     console.log('HIT');
-        // }
-        // console.log(this.speed);
-    }
-
     hits(player) {
 
         if (this.x + this.width / 2 > player.x - player.width / 2 && this.x - this.width / 2 < player.x + player.width / 2 && this.y + this.height / 2 > player.y - player.height / 2 && this.y - this.height / 2 < player.y + player.height / 2) {
             this.collision = true;
             return true;
         }
-        // this.collision = false;
-        // return false;
+        this.collision = false;
+        return false;
     }
 
     freezes() {
@@ -108,6 +100,15 @@ class Obstacles {
                 player.hitStop = true;
             }
         }
+    }
+
+
+    debug() {
+        // console.log(this.y, player.y);
+        // if (this.collision == true) {
+        //     console.log('HIT');
+        // }
+        // console.log(this.speed);
     }
 
 }

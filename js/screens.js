@@ -11,7 +11,6 @@ function screens() {
     }
 
     else if (tela === 1) { // jogo
-
         screenPLAY();
         if (player.freezes == false) {
             gameName();
@@ -23,8 +22,11 @@ function screens() {
     else if (tela === 3) { // créditos
         screenCREDITS();
     }
-    else if (tela == 9) {
-        screenPlayground();  
+    else if (tela === 4) { // skins
+        screenSkinsSelection();
+    }
+    else if (tela === 9) {
+        screenPlayground();
     }
 }
 
