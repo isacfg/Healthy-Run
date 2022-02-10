@@ -10,6 +10,7 @@ let diseases = [
     'Menor risco de doença cardiovascular',
     'Menor risco de AVC',
 ];
+let instructions = "A prática de educação física previne diversas doenças,\n conforme sua pontuação aumenta as doenças prevenidas\n vão ser exibidas na tela.";
 let pickDisease;
 let stop = 0;
 let interval = 600;
@@ -20,7 +21,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function aleatoriedade() {
+function aleatoriedade() { // função sorteia uma doença e a remove do array
 
     if (finalScore > (interval * 1) - 10 && finalScore < (interval * 2) - 10 && stop == 0) {
         pickDisease = getRandomInt(0, diseases.length);
@@ -80,10 +81,21 @@ function aleatoriedade() {
 
 
 
-function sickeness() {
+function sickeness() { // mostra a doença escolhida pela função anterior
 
     if (player.freezes == false) {
-        if (finalScore > interval * 1 && finalScore < interval * 2) {
+
+        if (finalScore >= 0 && finalScore < interval) {
+
+            textFont(retroFont);
+            fill('#F1FAEE');
+            textSize(14);
+            textAlign(CENTER);
+            text(instructions, width / 2, height / 2);
+
+        }
+
+        else if (finalScore > interval * 1 && finalScore < interval * 2) {
 
             textFont(retroFont);
             fill('#F1FAEE');
